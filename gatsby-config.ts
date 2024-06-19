@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Misja Pi`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.misjapi.pl`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -12,7 +12,22 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-wordpress',
     options: {
-      "url": "https://misjapi.pl/graphql"
+      "url": "https://misjapi.pl/graphql",
+      schema: {
+        requestConcurrency: 5,
+        perPage: 10,
+        timeout: 3000000,
+      },
+      type: {
+        MediaItem: {
+          localFile: {
+            requestConcurrency: 5,
+          },
+        },
+      },
+      develop: {
+        hardCacheMediaFiles: true,
+      },
     }
   }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-theme-ui"]
 };
