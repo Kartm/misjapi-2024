@@ -23,14 +23,18 @@ export const query = graphql`
 
 const IndexPage: React.FC<PageProps<IndexData>> = ({data}) => {
   return (
-    <main>
-      {data.allWpMenuItem.nodes.map((post: any) => (
-          <div key={post.url}>
-            <h2>{post.label}</h2>
-            {/*<div dangerouslySetInnerHTML={{ __html: post.content }} />*/}
-          </div>
-      ))}
-    </main>
+      <main>
+        <h1 className="text-3xl font-bold underline">
+          Hello world!
+        </h1>
+
+        {data.allWpMenuItem.nodes.map((post: any) => (
+            <div key={post.url}>
+              <h2>{post.label}</h2>
+              {/*<div dangerouslySetInnerHTML={{ __html: post.content }} />*/}
+            </div>
+        ))}
+      </main>
   )
 }
 
