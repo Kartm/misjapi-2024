@@ -1,13 +1,19 @@
 import * as React from "react"
 import {graphql, HeadFC, PageProps} from "gatsby"
+import Layout from "../components/common/Layout";
+import HeroSection from "../components/home/HeroSection";
+import WhyUsSection from "../components/home/WhyUsSection";
+import CoursesSection from "../components/home/CoursesSection";
+import TestimonialsSection from "../components/home/TestimonialsSection";
+import Navbar from "../components/common/Navbar";
 
 type IndexData = {
-  allWpMenuItem: {
-    nodes: {
-      url: string
-      label: string
-    }[]
-  }
+    allWpMenuItem: {
+        nodes: {
+            url: string
+            label: string
+        }[]
+    }
 }
 
 export const query = graphql`
@@ -22,20 +28,14 @@ export const query = graphql`
 `
 
 const IndexPage: React.FC<PageProps<IndexData>> = ({data}) => {
-  return (
-      <main>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
 
-        {data.allWpMenuItem.nodes.map((post: any) => (
-            <div key={post.url}>
-              <h2>{post.label}</h2>
-              {/*<div dangerouslySetInnerHTML={{ __html: post.content }} />*/}
-            </div>
-        ))}
-      </main>
-  )
+    return <Layout>
+        <Navbar menuItems={data.allWpMenuItem.nodes}/>
+        <HeroSection/>
+        <WhyUsSection/>
+        <CoursesSection/>
+        <TestimonialsSection/>
+    </Layout>
 }
 
 export default IndexPage
