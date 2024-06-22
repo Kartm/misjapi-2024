@@ -1,0 +1,47 @@
+{
+  "heroSection": {
+    "titleTop": "Korepetycje on-line",
+    "titleBottom": "nie muszą być nudne!",
+    "description": "Odkryj nowoczesne podejście do edukacji, które sprawia, że nauka jest łatwa i przyjemna.",
+    "chooseClasses": "Wybierz zajęcia"
+  },
+  "whyUsSection": {
+    "title": "Dlaczego Misja Pi?",
+    "description": "Poznaj trzy filary naszej metodyki, dzięki którym nasze zajęcia są efektywne.",
+    "teachersWithPassion": "Nauczyciele z pasją",
+    "teachersDescription": "Są wśród nas harcerze, animatorzy i pasjonaci nauki. Wiemy jak połączyć wiedzę z umiejętnościami wychowawczymi.",
+    "everythingUnderControl": "Wszystko pod kontrolą",
+    "controlDescription": "Wygodnie śledź postępy oraz zgłaszaj nieobecności na platformie ActiveNow.",
+    "youngCreativeTeam": "Młoda i kreatywna kadra",
+    "teamDescription": "Wiemy, jak wykorzystać nowoczesne narzędzia, aby nauka była skuteczna."
+  },
+  "coursesSection": {
+    "title": "Zróżnicowana oferta zajęć",
+    "description": "Wybierz zajęcia dopasowane do potrzeb Twojego dziecka.",
+    "individualTutoring": "KOREPETYCJE",
+    "individualTutoringDescription": "Zajęcia indywidualne.",
+    "priceFrom": "od",
+    "priceCurrency": "zł",
+    "priceMinutes": "min",
+    "subjects": "Przedmioty do wyboru:",
+    "math": "MATEMATYKA",
+    "english": "J. ANGIELSKI",
+    "german": "J. NIEMIECKI",
+    "physics": "FIZYKA",
+    "chooseDate": "Wybierz termin",
+    "groupCourses": "KURSY GRUPOWE",
+    "groupCoursesDescription1": "Egzamin ósmoklasisty/matura.",
+    "groupCoursesDescription2": "Grupy składają się z 2-4 osób.",
+    "chooseGroup": "Wybierz grupę"
+  },
+  "testimonialsSection": {
+    "title": "Opinie naszych uczniów",
+    "description": "Przekonaj się, dlaczego polecają nas innym."
+  },
+  "footer": {
+    "companyName": "© {{year}} Misja Pi.",
+    "allRightsReserved": "Wszelkie prawa zastrzeżone.",
+    "terms": "Regulamin",
+    "contact": "Kontakt"
+  }
+}

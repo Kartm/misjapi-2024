@@ -1,10 +1,10 @@
 import * as React from "react"
 import {graphql, HeadFC, PageProps} from "gatsby"
 import Layout from "../components/common/Layout";
-import HeroSection from "../components/home/HeroSection";
-import WhyUsSection from "../components/home/WhyUsSection";
-import CoursesSection from "../components/home/CoursesSection";
-import TestimonialsSection from "../components/home/TestimonialsSection";
+import HeroSection from "../components/index/HeroSection";
+import WhyUsSection from "../components/index/WhyUsSection";
+import CoursesSection from "../components/index/CoursesSection";
+import TestimonialsSection from "../components/index/TestimonialsSection";
 import Navbar from "../components/common/Navbar";
 
 type IndexData = {
@@ -17,11 +17,20 @@ type IndexData = {
 }
 
 export const query = graphql`
-  query {
+  query ($language: String!) {
     allWpMenuItem {
       nodes {
         url
         label
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
       }
     }
   }

@@ -20,16 +20,64 @@ const config: GatsbyConfig = {
       },
       type: {
         MediaItem: {
+          // exclude: true,
           localFile: {
             requestConcurrency: 5,
           },
         },
+        // Comment: {
+        //   exclude: true,
+        // },
+        // Post: {
+        //   exclude: true,
+        // },
+        // User: {
+        //   exclude: true,
+        // },
       },
       develop: {
         hardCacheMediaFiles: true,
+        hardCacheData: true,
       },
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp"]
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      path: `${__dirname}/locales`,
+      name: `locales`,
+    }
+  },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locales`, // name given by the `gatsby-source-filesystem` plugin.
+        languages: [`pl`],
+        defaultLanguage: `pl`,
+        siteUrl: `https://www.misjapi.pl`,
+        pages: [
+          {
+            matchPath: '/index',
+            languages: ['pl']
+          }
+        ]
+      }
+    }, {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /images/
+        }
+      }
+    },{
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `inter\:100,300,700`,
+          // `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    }]
 };
 
 export default config;
