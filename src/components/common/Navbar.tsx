@@ -23,13 +23,13 @@ const Navbar: React.FC<NavbarProps> = ({menuItems}) => {
                 <span className="self-center text-5xl font-thin whitespace-nowrap uppercase">Misja Pi</span>
             </div>
             <button onClick={toggleMenu} type="button"
-                    className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden ${open ? 'bg-gray-100':''} focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600`}
+                    className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden ${open ? 'bg-gray-100':''} focus:outline-none focus:ring-2 focus:ring-gray-200`}
                     aria-controls="navbar" aria-expanded="false">
                 <span className="sr-only">Toggle menu</span>
                 <MenuToggleIcon className="w-5 h-5"/>
             </button>
             <div className={`w-full md:block md:w-auto ${open ? '':'hidden'}`} id="navbar">
-                <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white bg-gray-900 dark:border-gray-700">
                     {menuItems.map((item) => <li key={item.url}>
                         <a href={item.url}
                         className="block py-2 px-3 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"

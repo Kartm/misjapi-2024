@@ -6,7 +6,7 @@ const TestimonialsSection: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="testimonials px-4 py-8 bg-gray-100 text-center mt-20">
+        <section className="testimonials px-4 py-20 bg-amber-50 text-center mt-20">
             <h1 className="text-3xl font-bold mb-8">{t('testimonialsSection.title')}</h1>
             <p className="text-sm mb-8">{t('testimonialsSection.description')}</p>
 

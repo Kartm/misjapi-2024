@@ -5,6 +5,7 @@ import EnglishIcon from '../../images/courses/english.svg';
 import GermanIcon from '../../images/courses/german.svg';
 import MathIcon from '../../images/courses/math.svg';
 import PhysicsIcon from '../../images/courses/physics.svg';
+import {StaticImage} from "gatsby-plugin-image";
 
 const CoursesSection: React.FC = () => {
     const {t} = useTranslation();
@@ -15,7 +16,7 @@ const CoursesSection: React.FC = () => {
             <p className="text-sm mb-8">{t('coursesSection.description')}</p>
 
             <div className="flex flex-wrap justify-center mb-8 gap-8">
-                <div className="w-72 p-8 border rounded-lg shadow">
+                <div className="w-64 px-6 py-8 border rounded-lg shadow">
                     <h3 className="text-xl font-bold mb-2">{t('coursesSection.individualTutoring')}</h3>
                     <p className="text-sm mb-8">{t('coursesSection.individualTutoringDescription')}</p>
 
@@ -30,21 +31,25 @@ const CoursesSection: React.FC = () => {
                         </div>
                     </div>
 
-                    <p className="font-bold mb-2">{t('coursesSection.subjects')}</p>
-                    <ul className="list-none list-inside mb-10">
-                        <li className="flex flex-row justify-center items-center gap-2"><MathIcon
-                            className="w-8 h-8 inline"/> {t('coursesSection.math')}</li>
-                        <li className="flex flex-row justify-center items-center gap-2"><EnglishIcon
-                            className="w-8 h-8 inline"/> {t('coursesSection.english')}</li>
-                        <li className="flex flex-row justify-center items-center gap-2"><GermanIcon
-                            className="w-8 h-8 inline"/> {t('coursesSection.german')}</li>
-                        <li className="flex flex-row justify-center items-center gap-2"><PhysicsIcon
-                            className="w-8 h-8 inline"/> {t('coursesSection.physics')}</li>
+                    <ul className="flex flex-col list-none list-inside mb-10 gap-2 pl-4">
+                        <li className="flex flex-row items-center gap-3"><StaticImage
+                            src={'../../images/courses/math.svg'} height={32} width={32}
+                            transformOptions={{fit: 'cover'}} alt={"math icon"}/> {t('coursesSection.math')}</li>
+                        <li className="flex flex-row items-center gap-3"><StaticImage
+                            src={'../../images/courses/english.svg'} height={32} width={32}
+                            transformOptions={{fit: 'cover'}} alt={"english icon"}/> {t('coursesSection.english')}</li>
+                        <li className="flex flex-row items-center gap-3"><StaticImage
+                            src={'../../images/courses/german.svg'} height={32} width={32}
+                            transformOptions={{fit: 'cover'}} alt={"german icon"}/> {t('coursesSection.german')}</li>
+                        <li className="flex flex-row items-center gap-3"><StaticImage
+                            src={'../../images/courses/physics.svg'} height={32} width={32}
+                            transformOptions={{fit: 'cover'}} alt={"physics icon"}/> {t('coursesSection.physics')}</li>
                     </ul>
-                    <LinkButton className={"text-black bg-amber-500"} href="/korepetycje/">{t('coursesSection.chooseDate')}</LinkButton>
+                    <LinkButton className={"text-black bg-amber-500"}
+                                href="/korepetycje/">{t('coursesSection.chooseDate')}</LinkButton>
                 </div>
 
-                <div className="w-72 p-8 border rounded-lg shadow">
+                <div className="w-64 px-6 py-8 border rounded-lg shadow">
                     <h3 className="text-xl font-bold mb-2">{t('coursesSection.groupCourses')}</h3>
                     <p className="text-sm">{t('coursesSection.groupCoursesDescription1')}</p>
                     <p className="text-sm mb-8">{t('coursesSection.groupCoursesDescription2')}</p>
@@ -57,14 +62,16 @@ const CoursesSection: React.FC = () => {
                         </div>
                     </div>
 
-                    <p className="font-bold mb-2">{t('coursesSection.subjects')}</p>
-                    <div className="list-none list-inside mb-10">
-                        <li className="flex flex-row justify-center items-center gap-2"><MathIcon
-                            className="w-8 h-8 inline"/> {t('coursesSection.math')}</li>
-                        <li className="flex flex-row justify-center items-center gap-2"><EnglishIcon
-                            className="w-8 h-8 inline"/> {t('coursesSection.english')}</li>
-                    </div>
-                    <LinkButton className={"text-black bg-amber-500"} href="/kursy-grupowe/">{t('coursesSection.chooseGroup')}</LinkButton>
+                    <ul className="flex flex-col list-none list-inside mb-10 gap-2 pl-4">
+                        <li className="flex flex-row items-center gap-3"><StaticImage
+                            src={'../../images/courses/math.svg'} height={32} width={32}
+                            transformOptions={{fit: 'cover'}} alt={"math icon"}/> {t('coursesSection.math')}</li>
+                        <li className="flex flex-row items-center gap-3"><StaticImage
+                            src={'../../images/courses/english.svg'} height={32} width={32}
+                            transformOptions={{fit: 'cover'}} alt={"english icon"}/> {t('coursesSection.english')}</li>
+                    </ul>
+                    <LinkButton className={"text-black bg-amber-500"}
+                                href="/kursy-grupowe/">{t('coursesSection.chooseGroup')}</LinkButton>
                 </div>
             </div>
         </section>
