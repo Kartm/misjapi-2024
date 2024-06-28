@@ -8,25 +8,27 @@ const WhyUsSection: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="mt-20 px-4 text-center">
-            <h1 className="mb-8 text-3xl font-bold">{t('whyUsSection.title')}</h1>
-            <p className="mb-8 text-sm">{t('whyUsSection.description')}</p>
+        <section className="mt-20 px-4 text-center md:mt-40">
+            <div className="container mx-auto">
+                <h1 className="text-3xl font-bold md:text-5xl">{t('whyUsSection.title')}</h1>
+                <p className="mt-10 text-sm md:text-base">{t('whyUsSection.description')}</p>
 
-            <div className="flex flex-wrap justify-center gap-12">
-                <div className="flex flex-col items-center">
-                    <DedicationIllustration className="mb-2 h-28"/>
-                    <h3 className="mb-2 text-lg font-bold">{t('whyUsSection.teachersWithPassion')}</h3>
-                    <p className="text-sm">{t('whyUsSection.teachersDescription')}</p>
-                </div>
-                <div className="flex flex-col items-center">
-                    <ControlIllustration className="mb-2 h-28"/>
-                    <h3 className="mb-2 text-lg font-bold">{t('whyUsSection.everythingUnderControl')}</h3>
-                    <p className="text-sm">{t('whyUsSection.controlDescription')}</p>
-                </div>
-                <div className="flex flex-col items-center">
-                    <CreativityIllustration className="mb-2 h-28"/>
-                    <h3 className="mb-2 text-lg font-bold">{t('whyUsSection.youngCreativeTeam')}</h3>
-                    <p className="text-sm">{t('whyUsSection.teamDescription')}</p>
+                <div className="mt-10 flex flex-wrap justify-center gap-12 md:mt-20">
+                    <div className="flex max-w-96 flex-col items-center">
+                        <DedicationIllustration className="h-28"/>
+                        <h3 className="mt-2 text-lg font-bold md:mt-4 md:text-2xl">{t('whyUsSection.teachersWithPassion')}</h3>
+                        <p className="mt-2 text-sm md:mt-4 md:text-base">{t('whyUsSection.teachersDescription')}</p>
+                    </div>
+                    <div className="flex max-w-96 flex-col items-center">
+                        <ControlIllustration className="h-28"/>
+                        <h3 className="mt-2 text-lg font-bold md:mt-4 md:text-2xl">{t('whyUsSection.everythingUnderControl')}</h3>
+                        <p className="mt-2 text-sm md:mt-4 md:text-base">{t('whyUsSection.controlDescription')}</p>
+                    </div>
+                    <div className="flex max-w-96 flex-col items-center">
+                        <CreativityIllustration className=" h-28"/>
+                        <h3 className="mt-2 text-lg font-bold md:mt-4 md:text-2xl">{t('whyUsSection.youngCreativeTeam')}</h3>
+                        <p className="mt-2 text-sm md:mt-4 md:text-base">{t('whyUsSection.teamDescription')}</p>
+                    </div>
                 </div>
             </div>
         </section>
