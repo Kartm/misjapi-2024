@@ -10,9 +10,9 @@ const CoursesSection: React.FC = () => {
     const {t} = useTranslation();
 
     return (
-        <section id="courses" className="courses py-8 bg-white text-center mb-20">
-            <h1 className="text-3xl font-bold mb-4">{t('coursesSection.title')}</h1>
-            <p className="text-sm mb-4">{t('coursesSection.description')}</p>
+        <section id="courses" className="text-center px-4 mt-20">
+            <h1 className="text-3xl font-bold mb-8">{t('coursesSection.title')}</h1>
+            <p className="text-sm mb-8">{t('coursesSection.description')}</p>
 
             <div className="flex flex-wrap justify-center mb-8 gap-8">
                 <div className="w-72 p-8 border rounded-lg shadow">

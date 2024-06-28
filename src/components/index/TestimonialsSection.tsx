@@ -6,9 +6,9 @@ const TestimonialsSection: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="testimonials py-8 bg-gray-100 text-center">
-            <h1 className="text-3xl font-bold mb-4">{t('testimonialsSection.title')}</h1>
-            <p className="text-lg mb-8">{t('testimonialsSection.description')}</p>
+        <section className="testimonials px-4 py-8 bg-gray-100 text-center mt-20">
+            <h1 className="text-3xl font-bold mb-8">{t('testimonialsSection.title')}</h1>
+            <p className="text-sm mb-8">{t('testimonialsSection.description')}</p>
 
             <div className="flex flex-wrap justify-center gap-4">
                 <div className="rounded-xl shadow overflow-hidden">
