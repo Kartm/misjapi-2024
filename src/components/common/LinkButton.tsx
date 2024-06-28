@@ -2,6 +2,7 @@ import React from "react";
 import {twMerge} from "tailwind-merge";
 
 type LinkButtonProps = React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> & {
+    className?: string;
     children: React.ReactNode;
 };
 

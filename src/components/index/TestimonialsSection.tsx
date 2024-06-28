@@ -6,18 +6,18 @@ const TestimonialsSection: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="testimonials px-4 py-20 bg-amber-50 text-center mt-20">
-            <h1 className="text-3xl font-bold mb-8">{t('testimonialsSection.title')}</h1>
-            <p className="text-sm mb-8">{t('testimonialsSection.description')}</p>
+        <section className="mt-20 bg-amber-50 px-4 py-20 text-center">
+            <h1 className="mb-8 text-3xl font-bold">{t('testimonialsSection.title')}</h1>
+            <p className="mb-8 text-sm">{t('testimonialsSection.description')}</p>
 
             <div className="flex flex-wrap justify-center gap-4">
-                <div className="rounded-xl shadow overflow-hidden">
+                <div className="overflow-hidden rounded-xl shadow">
                     <StaticImage src="../../images/testimonials/1.jpg" alt="Opinia 1"/>
                 </div>
-                <div className="rounded-xl shadow overflow-hidden">
+                <div className="overflow-hidden rounded-xl shadow">
                     <StaticImage src="../../images/testimonials/2.jpg" alt="Opinia 2"/>
                 </div>
-                <div className="rounded-xl shadow overflow-hidden">
+                <div className="overflow-hidden rounded-xl shadow">
                     <StaticImage src="../../images/testimonials/3.jpg" alt="Opinia 3"/>
                 </div>
             </div>

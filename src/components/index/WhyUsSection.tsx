@@ -8,24 +8,24 @@ const WhyUsSection: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="why-us px-4 text-center mt-20">
-            <h1 className="text-3xl font-bold mb-8">{t('whyUsSection.title')}</h1>
-            <p className="text-sm mb-8">{t('whyUsSection.description')}</p>
+        <section className="mt-20 px-4 text-center">
+            <h1 className="mb-8 text-3xl font-bold">{t('whyUsSection.title')}</h1>
+            <p className="mb-8 text-sm">{t('whyUsSection.description')}</p>
 
             <div className="flex flex-wrap justify-center gap-12">
                 <div className="flex flex-col items-center">
-                    <DedicationIllustration className="h-28 mb-2"/>
-                    <h3 className="text-lg font-bold mb-2">{t('whyUsSection.teachersWithPassion')}</h3>
+                    <DedicationIllustration className="mb-2 h-28"/>
+                    <h3 className="mb-2 text-lg font-bold">{t('whyUsSection.teachersWithPassion')}</h3>
                     <p className="text-sm">{t('whyUsSection.teachersDescription')}</p>
                 </div>
                 <div className="flex flex-col items-center">
-                    <ControlIllustration className="h-28 mb-2"/>
-                    <h3 className="text-lg font-bold mb-2">{t('whyUsSection.everythingUnderControl')}</h3>
+                    <ControlIllustration className="mb-2 h-28"/>
+                    <h3 className="mb-2 text-lg font-bold">{t('whyUsSection.everythingUnderControl')}</h3>
                     <p className="text-sm">{t('whyUsSection.controlDescription')}</p>
                 </div>
                 <div className="flex flex-col items-center">
-                    <CreativityIllustration className="h-28 mb-2"/>
-                    <h3 className="text-lg font-bold mb-2">{t('whyUsSection.youngCreativeTeam')}</h3>
+                    <CreativityIllustration className="mb-2 h-28"/>
+                    <h3 className="mb-2 text-lg font-bold">{t('whyUsSection.youngCreativeTeam')}</h3>
                     <p className="text-sm">{t('whyUsSection.teamDescription')}</p>
                 </div>
             </div>

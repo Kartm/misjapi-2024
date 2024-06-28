@@ -1,0 +1,21 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect" // detect react version
+    }
+  },
+  "env": {
+    "node": true // defines things like process.env when generating through node
+  },
+  "extends": [
+    "eslint:recommended", // use recommended configs
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "rules": {
+    // gatsby's rules
+    "no-anonymous-exports-page-templates": "warn",
+    "limited-exports-page-templates": "warn"
+  }
+}

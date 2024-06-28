@@ -6,12 +6,12 @@ import UnderlineWave from "../../images/underline-wave.svg";
 const HeroSection: React.FC = () => {
     const {t} = useTranslation();
 
-    return <section className="hero text-center px-4 mt-8">
-        <div className="flex items-center flex-col mb-8">
+    return <section className="mt-8 px-4 text-center">
+        <div className="mb-8 flex flex-col items-center">
             <h1 className="text-3xl font-bold">{t('heroSection.titleTop')}</h1>
-            <h1 className="text-3xl font-bold relative"><span>{t('heroSection.titleBottom')}</span><UnderlineWave className="absolute w-14 -left-2 -bottom-1/3"/></h1>
+            <h1 className="relative text-3xl font-bold"><span>{t('heroSection.titleBottom')}</span><UnderlineWave className="absolute -bottom-1/3 -left-2 w-14"/></h1>
         </div>
-        <p className="text-sm mb-8">{t('heroSection.description')}</p>
+        <p className="mb-8 text-sm">{t('heroSection.description')}</p>
         <LinkButton href={"#courses"}>{t('heroSection.chooseClasses')}</LinkButton>
     </section>
 }

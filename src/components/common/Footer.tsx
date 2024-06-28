@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <footer className="bg-gray-900 text-white py-6">
+        <footer className="bg-gray-900 py-6 text-white">
             <div className="container mx-auto text-center text-sm">
                 <div className="mb-4">
                     <p>{t('footer.companyName', {year: new Date().getFullYear()})}</p>
