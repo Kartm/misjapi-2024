@@ -77,7 +77,11 @@ const config: GatsbyConfig = {
         ],
         display: 'swap'
       }
-    }]
+    },
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp', // Needed for dynamic images
+  ]
 };
 
 export default config;
