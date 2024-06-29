@@ -1,19 +1,19 @@
 {
   "heroSection": {
     "titleTop": "Korepetycje online,",
-    "titleBottom": "czyli zajęcia z własnego domu!",
+    "titleBottom": "czyli zajęcia <0>z własnego domu!</0>",
     "description1": "Odkryj nowoczesne podejście do edukacji,",
     "description2": "które łączy komfort i kreatywne narzędzia do nauki.",
     "chooseClasses": "Wybierz zajęcia"
   },
   "whyUsSection": {
     "title": "Dlaczego Misja Pi?",
-    "description": "Poznaj trzy rzeczy, które sprawią, że nasze zajęcia mogą Cię zainteresować",
+    "description": "Poznaj trzy rzeczy, które sprawią, że nasze zajęcia mogą Cię zainteresować.",
     "teachersWithPassion": "Nauczyciele z pasją",
     "teachersDescription": "Większość z nas stanowią harcerze, animatorzy i pasjonaci nauki. Wiemy jak wspierać w rozwoju we własnym tempie i uczynić naukę mniej stresującą",
     "everythingUnderControl": "Wszystko pod kontrolą",
-    "controlDescription": "Dostajesz dostęp do platformy ActiveNow. Umówione terminy, tematy zajeć, materiały i płatności w jednym miejscu. Nie musisz już martwić się, że o czymś zapomnisz!",
-    "youngCreativeTeam": "Kreatywna, doświadczona kadra",
+    "controlDescription": "Dostajesz dostęp do platformy ActiveNow. Umówione terminy, tematy zajęć, materiały i płatności w jednym miejscu. Nie musisz już martwić się, że o czymś zapomnisz!",
+    "youngCreativeTeam": "Kreatywność i doświadczenie",
     "teamDescription": "Wiemy, jak wykorzystać nowoczesne narzędzia do pracy zdalnej, aby nauka była przyjemniejsza i bardziej efektywna."
   },
   "coursesSection": {
@@ -36,8 +36,8 @@
     "chooseGroup": "Wybierz grupę"
   },
   "testimonialsSection": {
-    "title": "Opinie naszych uczniów",
-    "description": "Przekonaj się, dlaczego polecają nas innym."
+    "title": "Poznaj opinie o naszych zajęciach",
+    "description": "Jak inni oceniają skorzystanie z naszych usług?"
   },
   "footer": {
     "companyName": "© {{year}} Misja Pi.",
