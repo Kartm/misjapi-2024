@@ -1,0 +1,10 @@
+authtoken: 2IdkjST4EgPYWsG7IuowwrwU5tF_3U11EYyudEaeQb8Xqrfcv
+version: 2
+tunnels:
+  website:
+#    labels:
+#      - edge=edghts_2iYFVu6dtZDAkA16ibNy1CZSW80
+    addr: "http://php-apache:80"
+    proto: http
+    host_header: rewrite
+

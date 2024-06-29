@@ -4,3 +4,8 @@ public
 src/gatsby-types.d.ts
 .idea
 .wordpress-cache
+
+dbdata
+phpmotors
+www/.gitignore
+ngrok.yml
