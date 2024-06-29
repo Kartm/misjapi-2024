@@ -1,8 +1,6 @@
 import {useTranslation} from "gatsby-plugin-react-i18next";
 import React from "react";
-import ControlIllustration from '../../images/why-us/control.svg';
-import CreativityIllustration from '../../images/why-us/creativity.svg';
-import DedicationIllustration from '../../images/why-us/dedication.svg';
+import ExampleVideo from '../../videos/example.webm';
 
 const WhyUsSection: React.FC = () => {
     const { t } = useTranslation();
@@ -15,17 +13,23 @@ const WhyUsSection: React.FC = () => {
 
                 <div className="mt-10 flex flex-wrap justify-center gap-12 md:mt-20">
                     <div className="flex max-w-96 flex-col items-center">
-                        <DedicationIllustration className="h-28"/>
+                        <video autoPlay muted loop>
+                            <source src={ExampleVideo} type="video/webm"/>
+                        </video>
                         <h3 className="mt-2 text-lg font-bold md:mt-4 md:text-2xl">{t('whyUsSection.teachersWithPassion')}</h3>
                         <p className="mt-2 text-sm md:mt-4 md:text-base">{t('whyUsSection.teachersDescription')}</p>
                     </div>
                     <div className="flex max-w-96 flex-col items-center">
-                        <CreativityIllustration className=" h-28"/>
+                        <video autoPlay muted loop>
+                            <source src={ExampleVideo} type="video/webm"/>
+                        </video>
                         <h3 className="mt-2 text-lg font-bold md:mt-4 md:text-2xl">{t('whyUsSection.youngCreativeTeam')}</h3>
                         <p className="mt-2 text-sm md:mt-4 md:text-base">{t('whyUsSection.teamDescription')}</p>
                     </div>
                     <div className="flex max-w-96 flex-col items-center">
-                        <ControlIllustration className="h-28"/>
+                        <video autoPlay muted loop>
+                            <source src={ExampleVideo} type="video/webm"/>
+                        </video>
                         <h3 className="mt-2 text-lg font-bold md:mt-4 md:text-2xl">{t('whyUsSection.everythingUnderControl')}</h3>
                         <p className="mt-2 text-sm md:mt-4 md:text-base">{t('whyUsSection.controlDescription')}</p>
                     </div>
