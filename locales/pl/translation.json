@@ -1,20 +1,20 @@
 {
   "heroSection": {
-    "titleTop": "Korepetycje on-line",
-    "titleBottom": "nie muszą być nudne!",
+    "titleTop": "Korepetycje online,",
+    "titleBottom": "czyli zajęcia z własnego domu!",
     "description1": "Odkryj nowoczesne podejście do edukacji,",
-    "description2": "które sprawia, że nauka jest łatwa i przyjemna.",
+    "description2": "które łączy komfort i kreatywne narzędzia do nauki.",
     "chooseClasses": "Wybierz zajęcia"
   },
   "whyUsSection": {
     "title": "Dlaczego Misja Pi?",
-    "description": "Poznaj trzy filary naszej metodyki, dzięki którym nasze zajęcia są efektywne.",
+    "description": "Poznaj trzy rzeczy, które sprawią, że nasze zajęcia mogą Cię zainteresować",
     "teachersWithPassion": "Nauczyciele z pasją",
-    "teachersDescription": "Są wśród nas harcerze, animatorzy i pasjonaci nauki. Wiemy jak połączyć wiedzę z umiejętnościami wychowawczymi.",
+    "teachersDescription": "Większość z nas stanowią harcerze, animatorzy i pasjonaci nauki. Wiemy jak wspierać w rozwoju we własnym tempie i uczynić naukę mniej stresującą",
     "everythingUnderControl": "Wszystko pod kontrolą",
-    "controlDescription": "Wygodnie śledź postępy oraz zgłaszaj nieobecności na platformie ActiveNow.",
-    "youngCreativeTeam": "Młoda i kreatywna kadra",
-    "teamDescription": "Wiemy, jak wykorzystać nowoczesne narzędzia, aby nauka była skuteczna."
+    "controlDescription": "Dostajesz dostęp do platformy ActiveNow. Umówione terminy, tematy zajeć, materiały i płatności w jednym miejscu. Nie musisz już martwić się, że o czymś zapomnisz!",
+    "youngCreativeTeam": "Kreatywna, doświadczona kadra",
+    "teamDescription": "Wiemy, jak wykorzystać nowoczesne narzędzia do pracy zdalnej, aby nauka była przyjemniejsza i bardziej efektywna."
   },
   "coursesSection": {
     "title": "Zróżnicowana oferta zajęć",

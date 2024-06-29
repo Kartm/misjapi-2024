@@ -20,14 +20,14 @@ const WhyUsSection: React.FC = () => {
                         <p className="mt-2 text-sm md:mt-4 md:text-base">{t('whyUsSection.teachersDescription')}</p>
                     </div>
                     <div className="flex max-w-96 flex-col items-center">
-                        <ControlIllustration className="h-28"/>
-                        <h3 className="mt-2 text-lg font-bold md:mt-4 md:text-2xl">{t('whyUsSection.everythingUnderControl')}</h3>
-                        <p className="mt-2 text-sm md:mt-4 md:text-base">{t('whyUsSection.controlDescription')}</p>
-                    </div>
-                    <div className="flex max-w-96 flex-col items-center">
                         <CreativityIllustration className=" h-28"/>
                         <h3 className="mt-2 text-lg font-bold md:mt-4 md:text-2xl">{t('whyUsSection.youngCreativeTeam')}</h3>
                         <p className="mt-2 text-sm md:mt-4 md:text-base">{t('whyUsSection.teamDescription')}</p>
+                    </div>
+                    <div className="flex max-w-96 flex-col items-center">
+                        <ControlIllustration className="h-28"/>
+                        <h3 className="mt-2 text-lg font-bold md:mt-4 md:text-2xl">{t('whyUsSection.everythingUnderControl')}</h3>
+                        <p className="mt-2 text-sm md:mt-4 md:text-base">{t('whyUsSection.controlDescription')}</p>
                     </div>
                 </div>
             </div>

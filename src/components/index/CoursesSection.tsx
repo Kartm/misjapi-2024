@@ -55,7 +55,7 @@ const CoursesSection: React.FC = () => {
                         <p className="mb-8 text-sm md:text-base">{t('coursesSection.groupCoursesDescription2')}</p>
 
                         <div className="mb-8 flex flex-row items-stretch justify-center gap-2">
-                            <h1 className="text-6xl font-bold">{35}</h1>
+                            <h1 className="text-6xl font-bold">{40}</h1>
                             <div className="flex flex-col items-start">
                                 <p className="text-base font-bold">{t('coursesSection.priceCurrency')}</p>
                                 <p className="text-sm text-gray-500 md:text-base">/60 {t('coursesSection.priceMinutes')}</p>
