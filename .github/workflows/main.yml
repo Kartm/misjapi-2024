@@ -13,10 +13,9 @@ jobs:
     - name: Upload to FTP server
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
-        dry-run: true
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./
-        server-dir: /www/test/
+        server-dir: /www/gatsby_dist/
         protocol: ftp
