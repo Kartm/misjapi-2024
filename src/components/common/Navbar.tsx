@@ -18,9 +18,9 @@ const Navbar: React.FC<NavbarProps> = ({menuItems}) => {
 
     return <nav className="border-gray-200">
         <div className="container mx-auto flex flex-wrap items-center justify-between p-4">
-            <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                <LogoIcon className="size-16"/>
-                <span className="self-center whitespace-nowrap text-5xl font-thin uppercase">Misja Pi</span>
+            <div className="flex items-center space-x-3">
+                <LogoIcon className="size-8"/>
+                <span className="self-center whitespace-nowrap text-4xl font-thin uppercase">Misja Pi</span>
             </div>
             <button onClick={toggleMenu} type="button"
                     className={`inline-flex size-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 md:hidden md:text-base ${open ? 'bg-gray-100':''} focus:outline-none focus:ring-2 focus:ring-gray-200`}

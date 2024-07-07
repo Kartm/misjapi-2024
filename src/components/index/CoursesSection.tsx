@@ -13,7 +13,7 @@ const CoursesSection: React.FC = () => {
                 <p className="mt-10 text-sm md:text-base">{t('coursesSection.description')}</p>
 
                 <div className="mt-10 flex flex-wrap justify-center gap-8">
-                    <div className="flex w-64 flex-col rounded-lg border px-6 py-8 shadow md:w-72">
+                    <div className="flex w-full max-w-64 flex-col rounded-lg border px-6 py-8 shadow md:w-72">
                         <h3 className="mb-2 text-xl font-bold">{t('coursesSection.individualTutoring')}</h3>
                         <p className="mb-8 text-sm md:text-base">{t('coursesSection.individualTutoringDescription')}</p>
 
@@ -28,7 +28,7 @@ const CoursesSection: React.FC = () => {
                             </div>
                         </div>
 
-                        <ul className="mb-10 flex list-inside list-none flex-col gap-2 pl-4 md:pl-2">
+                        <ul className="mb-10 flex list-inside list-none flex-col gap-2">
                             <li className="flex flex-row items-center gap-3"><StaticImage
                                 src={'../../images/courses/math.svg'} height={32} width={32}
                                 transformOptions={{fit: 'cover'}} alt={"math icon"}/> {t('coursesSection.math')}</li>
@@ -49,7 +49,7 @@ const CoursesSection: React.FC = () => {
                                     href="/korepetycje/">{t('coursesSection.chooseDate')}</LinkButton>
                     </div>
 
-                    <div className="flex w-64 flex-col rounded-lg border px-6 py-8 shadow md:w-72">
+                    <div className="flex w-full max-w-64 flex-col rounded-lg border px-6 py-8 shadow md:w-72">
                         <h3 className="mb-2 text-xl font-bold">{t('coursesSection.groupCourses')}</h3>
                         <p className="text-sm md:text-base">{t('coursesSection.groupCoursesDescription1')}</p>
                         <p className="mb-8 text-sm md:text-base">{t('coursesSection.groupCoursesDescription2')}</p>
@@ -62,7 +62,7 @@ const CoursesSection: React.FC = () => {
                             </div>
                         </div>
 
-                        <ul className="mb-10 flex list-inside list-none flex-col gap-2 pl-4 md:pl-2">
+                        <ul className="mb-10 flex list-inside list-none flex-col gap-2">
                             <li className="flex flex-row items-center gap-3"><StaticImage
                                 src={'../../images/courses/math.svg'} height={32} width={32}
                                 transformOptions={{fit: 'cover'}} alt={"math icon"}/> {t('coursesSection.math')}</li>
