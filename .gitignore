@@ -9,3 +9,7 @@ dbdata
 phpmotors
 www/.gitignore
 ngrok.yml
+
+*.env
+
+www/
