@@ -6,9 +6,9 @@ import {StaticImage} from "gatsby-plugin-image";
 const HeroSection: React.FC = () => {
     const {t} = useTranslation();
 
-    return <section className="px-4 py-20 text-center md:py-40">
-        <div className="container mx-auto flex items-end justify-between px-4 md:flex-row md:justify-start md:gap-56">
-            <div className="text-center md:text-left">
+    return <section className="px-4 py-20 text-center">
+        <div className="container mx-auto flex items-start justify-center px-4 md:gap-48">
+            <div className="text-center md:mt-48 md:text-left">
                 <div className="mb-8 flex flex-col items-center md:items-start">
                     <h1 className="text-3xl font-bold sm:whitespace-nowrap md:text-5xl">{t('heroSection.titleTop')}</h1>
                     <h1 className="text-3xl font-bold sm:whitespace-nowrap md:text-5xl"><Trans i18nKey="heroSection.titleBottom">
@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
                 <p className="mb-8 text-sm text-gray-500 md:text-base">{t('heroSection.description2')}</p>
                 <LinkButton href={"#courses"}>{t('heroSection.chooseClasses')}</LinkButton>
             </div>
-            <div className={"hidden md:block"}>
+            <div className={"hidden xl:block"}>
                 <StaticImage src={"../../images/hero.svg"} alt={"Hero image"} width={280}/>
             </div>
         </div>
