@@ -1,5 +1,5 @@
 import * as React from "react"
-import {graphql, HeadFC, PageProps} from "gatsby"
+import {graphql, HeadFC, PageProps, Script} from "gatsby"
 import Layout from "../components/common/Layout";
 import HeroSection from "../components/index/HeroSection";
 import WhyUsSection from "../components/index/WhyUsSection";
@@ -39,6 +39,9 @@ export const query = graphql`
 const IndexPage: React.FC<PageProps<IndexData>> = ({data}) => {
 
     return <Layout>
+        <div id="fb-root"></div>
+        <Script async defer crossOrigin="anonymous"
+                src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v20.0" nonce="FLeSA6HI"/>
         <Navbar menuItems={data.allWpMenuItem.nodes}/>
         <HeroSection/>
         <WhyUsSection/>

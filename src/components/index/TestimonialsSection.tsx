@@ -1,20 +1,8 @@
 import {useTranslation} from "gatsby-plugin-react-i18next";
 import React from "react";
 
-// todo consider Facebook's GraphQL API
-
 const TestimonialsSection: React.FC = () => {
     const { t } = useTranslation();
-
-    const params = '&width=300&height=400'
-
-    const facebookReviewUrls: string[] = [
-        'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmag.ja.5%2Fposts%2Fpfbid0A5faH4WxzxQHtg71jZrHNsyLa868FS3Qo7zQwyDM6hKwd9d124B6q4HziVVo2mfHl&show_text=true' + params,
-        'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02EmAKtuXdLP7m521JparrTKGmpEA5agghoZ9tvHsDLZmSvEzHjGAPkxMAPnDUdSGKl%26id%3D100005922067312&show_text=true' + params,
-        'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02ZQzmxXw5m9LUHRzRXTyDJiaKmHSeHfPTqjPLvCGcS5q4LYwvj7R2srf1DyA3BNzkl%26id%3D100081119022550&show_text=true' + params,
-        'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Femilia.janowik.5%2Fposts%2Fpfbid0VwcbY36qHMcyP7w3nM9cTjabdQtUs7iHjTyAys1xpDWmSKzfLPKgj2Cxwgx5xKTXl&show_text=true' + params,
-        'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0pC5XgHzX39QSftMEEM1ob47X8gChSH7d7a2wgxh9s486MQowTBDo6yH9JxpmQKjsl%26id%3D100088231114689&show_text=true' + params,
-    ]
 
     return (
         <section className="mt-20 bg-amber-50 px-4 py-20 text-center md:mt-40 md:py-40">
@@ -22,21 +10,36 @@ const TestimonialsSection: React.FC = () => {
                 <h1 className="mb-8 text-3xl font-bold md:text-5xl">{t('testimonialsSection.title')}</h1>
                 <p className="mb-8 text-sm md:text-base">{t('testimonialsSection.description')}</p>
 
-                <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-                    {
-                        facebookReviewUrls.map((url, i) =>
-                            <div key={i} className="w-75">
-                                <iframe
-                                    className="h-120 w-full overflow-y-hidden"
-                                    src={url}
-                                    allowFullScreen={true}
-                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"/>
-                            </div>
-                        )
-                    }
-
+                <div className="flex flex-wrap justify-center gap-4 md:gap-12">
+                    <iframe
+                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmag.ja.5%2Fposts%2Fpfbid0A8RAbtNNBkEV4L9QugEh6Lm9FBrsSwM9p2WN49Njnyc4ehyUfSuQTrZqR8mAYq9Yl&width=350&show_text=false&height=246&appId"
+                        width="350" height="246"  style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder="0"
+                        allowFullScreen={true}
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe
+                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02EouvDjP2XCQVJAXXB2MPxbRXKu1JAhRxhqxHXZcWkJj3rmCHGWZojVY4mXcKS4f7l%26id%3D100005922067312&width=350&show_text=false&height=246&appId"
+                        width="350" height="246" style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder="0"
+                        allowFullScreen={true}
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe
+                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02ZTkNHMnUx7fSSkbTQwiPu1jQAqEQhNiRAR4iGYug91WrDzcFcJf529SR3DmMasq4l%26id%3D100081119022550&width=350&show_text=false&height=169&appId"
+                        width="350" height="169" style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder="0"
+                        allowFullScreen={true}
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe
+                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Femilia.janowik.5%2Fposts%2Fpfbid0VzNBrrxEUAQS99GUQbqmCspDChnPRPBuGoCKmHi7wumqZ6BtKutkzkVCkaqCAgk5l&width=350&show_text=false&height=207&appId"
+                        width="350" height="207" style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder="0"
+                        allowFullScreen={true}
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <iframe
+                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02snUJvHUH5EywbMCm6Eaj87u2ZLe4W4ab7DyjQA9XVwnPQC6MQ5Qtmkmdu6K5HxrSl%26id%3D100088231114689&width=350&show_text=false&height=214&appId"
+                        width="350" height="214" style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder="0"
+                        allowFullScreen={true}
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
                 </div>
+
+
             </div>
         </section>
     );
