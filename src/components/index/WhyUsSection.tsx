@@ -36,7 +36,7 @@ const WhyUsSection: React.FC = () => {
                             src={'../../images/why-us/teachers.jpg'}
                             alt={'title'}
                             layout={'constrained'}
-                            height={280}
+                            height={256}
                             width={384}
                             quality={80}
                             transformOptions={{fit: "cover", cropFocus: "attention"}}
@@ -51,7 +51,7 @@ const WhyUsSection: React.FC = () => {
                             src={'../../images/why-us/creativity.jpg'}
                             alt={'title'}
                             layout={'constrained'}
-                            height={280}
+                            height={256}
                             width={384}
                             quality={80}
                             transformOptions={{fit: "cover", cropFocus: "attention"}}
@@ -65,10 +65,10 @@ const WhyUsSection: React.FC = () => {
                             src={'../../images/why-us/manage.jpg'}
                             alt={'title'}
                             layout={'constrained'}
-                            height={280}
+                            height={256}
                             width={384}
                             quality={90}
-                            transformOptions={{fit: "cover", cropFocus: "attention"}}
+                            transformOptions={{fit: "cover", cropFocus: 'attention'}}
                         />}
                         title={t('whyUsSection.everythingUnderControl')}
                         description={t('whyUsSection.controlDescription')}
