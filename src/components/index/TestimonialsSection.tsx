@@ -31,12 +31,6 @@ const TestimonialsSection: React.FC = () => {
                         width="350" height="207" style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder="0"
                         allowFullScreen={true}
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    <iframe
-                        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02snUJvHUH5EywbMCm6Eaj87u2ZLe4W4ab7DyjQA9XVwnPQC6MQ5Qtmkmdu6K5HxrSl%26id%3D100088231114689&width=350&show_text=false&height=214&appId"
-                        width="350" height="214" style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder="0"
-                        allowFullScreen={true}
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-
                 </div>
 
 

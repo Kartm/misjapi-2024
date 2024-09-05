@@ -30,23 +30,58 @@ const CoursesSection: React.FC = () => {
 
                         <ul className="mb-10 flex list-inside list-none flex-col gap-2">
                             <li className="flex flex-row items-center gap-3"><StaticImage
-                                src={'../../images/courses/math.svg'} height={32} width={32}
-                                transformOptions={{fit: 'cover'}} alt={"math icon"}/> {t('coursesSection.math')}</li>
+                                src={'../../images/courses/math.svg'}
+                                height={32}
+                                width={32}
+                                transformOptions={{fit: 'cover'}}
+                                alt={"math icon"}
+                            /> {t('coursesSection.math')}</li>
                             <li className="flex flex-row items-center gap-3"><StaticImage
-                                src={'../../images/courses/english.svg'} height={32} width={32}
-                                transformOptions={{fit: 'cover'}} alt={"english icon"}/> {t('coursesSection.english')}
+                                src={'../../images/courses/physics.svg'}
+                                height={32}
+                                width={32}
+                                transformOptions={{fit: 'cover'}}
+                                alt={"physics icon"}
+                            /> {t('coursesSection.physics')}
                             </li>
                             <li className="flex flex-row items-center gap-3"><StaticImage
-                                src={'../../images/courses/german.svg'} height={32} width={32}
-                                transformOptions={{fit: 'cover'}} alt={"german icon"}/> {t('coursesSection.german')}
+                                src={'../../images/courses/chemistry.svg'}
+                                height={32}
+                                width={32}
+                                transformOptions={{fit: 'cover'}}
+                                alt={"chemistry icon"}
+                            /> {t('coursesSection.chemistry')}
                             </li>
                             <li className="flex flex-row items-center gap-3"><StaticImage
-                                src={'../../images/courses/physics.svg'} height={32} width={32}
-                                transformOptions={{fit: 'cover'}} alt={"physics icon"}/> {t('coursesSection.physics')}
+                                src={'../../images/courses/english.svg'}
+                                height={32}
+                                width={32}
+                                transformOptions={{fit: 'cover'}}
+                                alt={"english icon"}
+                            /> {t('coursesSection.english')}
                             </li>
+                            <li className="flex flex-row items-center gap-3"><StaticImage
+                                src={'../../images/courses/german.svg'}
+                                height={32}
+                                width={32}
+                                transformOptions={{fit: 'cover'}}
+                                alt={"german icon"}
+                            /> {t('coursesSection.german')}
+                            </li>
+                            <li className="flex flex-row items-center gap-3"><StaticImage
+                                src={'../../images/courses/biology.svg'}
+                                height={32}
+                                width={32}
+                                transformOptions={{fit: 'cover'}}
+                                alt={"biology icon"}
+                            /> {t('coursesSection.biology')}
+                            </li>
+
                         </ul>
-                        <LinkButton className={"justify-center justify-self-stretch bg-amber-500 text-black"}
-                                    href="/korepetycje/">{t('coursesSection.chooseDate')}</LinkButton>
+                        <LinkButton
+                            className={"justify-center justify-self-stretch bg-amber-500 text-black"}
+                            href="/korepetycje/"
+                        >{t('coursesSection.chooseDate')}</LinkButton>
                     </div>
 
                     <div className="flex w-full max-w-64 flex-col rounded-lg border px-6 py-8 shadow md:w-72">

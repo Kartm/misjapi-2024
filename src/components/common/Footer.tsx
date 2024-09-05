@@ -12,10 +12,10 @@ const Footer: React.FC = () => {
                     <p>{t('footer.allRightsReserved')}</p>
                 </div>
                 <div className="flex justify-center space-x-4">
-                    <a href="/terms" className="hover:underline">
-                        {t('footer.terms')}
-                    </a>
-                    <a href="/contact" className="hover:underline">
+                    {/*<a href="/terms" className="hover:underline">*/}
+                    {/*    {t('footer.terms')}*/}
+                    {/*</a>*/}
+                    <a href="/kontakt" className="hover:underline">
                         {t('footer.contact')}
                     </a>
                 </div>
