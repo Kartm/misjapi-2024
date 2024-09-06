@@ -55,6 +55,7 @@ const config: GatsbyConfig = {
                 hardCacheMediaFiles: true,
                 hardCacheData: true,
             },
+            catchLinks: false,
         }
     }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
         resolve: `gatsby-source-filesystem`,
