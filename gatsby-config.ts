@@ -45,10 +45,41 @@ const config: GatsbyConfig = {
                 timeout: 3000000,
             },
             type: {
+                Post: {
+                    exclude: true,
+                },
+                PostToTagConnection: {
+                    exclude: true,
+                },
+                CategoryToPostConnection: {
+                    exclude: true,
+                },
+                PostFormatToPostConnection: {
+                    exclude: true,
+                },
+                UserToPostConnection: {
+                    exclude: true,
+                },
+                Tag: {
+                    exclude: true,
+                },
+                TagConnection: {
+                    exclude: true,
+                },
+                PostConnection: {
+                    exclude: true,
+                },
                 MediaItem: {
-                    localFile: {
-                        requestConcurrency: 5,
-                    },
+                    exclude: true,
+                },
+                Comment: {
+                    exclude: true,
+                },
+                PageToCommentConnection: {
+                    exclude: true,
+                },
+                UserToCommentConnection: {
+                    exclude: true,
                 },
             },
             develop: {
