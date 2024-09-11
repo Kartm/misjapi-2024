@@ -44,43 +44,44 @@ const config: GatsbyConfig = {
                 perPage: 10,
                 timeout: 3000000,
             },
+            useACF: true,
             type: {
-                Post: {
-                    exclude: true,
-                },
-                PostToTagConnection: {
-                    exclude: true,
-                },
-                CategoryToPostConnection: {
-                    exclude: true,
-                },
-                PostFormatToPostConnection: {
-                    exclude: true,
-                },
-                UserToPostConnection: {
-                    exclude: true,
-                },
-                Tag: {
-                    exclude: true,
-                },
-                TagConnection: {
-                    exclude: true,
-                },
-                PostConnection: {
-                    exclude: true,
-                },
-                MediaItem: {
-                    exclude: true,
-                },
-                Comment: {
-                    exclude: true,
-                },
-                PageToCommentConnection: {
-                    exclude: true,
-                },
-                UserToCommentConnection: {
-                    exclude: true,
-                },
+                // Post: {
+                //     exclude: true,
+                // },
+                // PostToTagConnection: {
+                //     exclude: true,
+                // },
+                // CategoryToPostConnection: {
+                //     exclude: true,
+                // },
+                // PostFormatToPostConnection: {
+                //     exclude: true,
+                // },
+                // UserToPostConnection: {
+                //     exclude: true,
+                // },
+                // Tag: {
+                //     exclude: true,
+                // },
+                // TagConnection: {
+                //     exclude: true,
+                // },
+                // PostConnection: {
+                //     exclude: true,
+                // },
+                // MediaItem: {
+                //     exclude: true,
+                // },
+                // Comment: {
+                //     exclude: true,
+                // },
+                // PageToCommentConnection: {
+                //     exclude: true,
+                // },
+                // UserToCommentConnection: {
+                //     exclude: true,
+                // },
             },
             develop: {
                 hardCacheMediaFiles: true,
