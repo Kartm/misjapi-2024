@@ -15,6 +15,7 @@ export type ClassesData = {
     allWpMisjaPiClass: {
         nodes: {
             polaOfertowe: {
+                ordering: number;
                 title: string;
                 subtitle: string;
                 description: string;
@@ -28,7 +29,7 @@ export type ClassesData = {
                         mediaItemUrl: string;
                     }
                 }
-                hourlyRate: number
+                hourlyRate: number;
             }
         }[]
     }
@@ -42,9 +43,10 @@ export const query = graphql`
         label
       }
     }
-    allWpMisjaPiClass {
+    allWpMisjaPiClass(sort: { fields: polaOfertowe___ordering, order: ASC }) {
       nodes {
         polaOfertowe {
+          ordering
           title
           subtitle
           description
@@ -53,9 +55,10 @@ export const query = graphql`
               localFile {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 300
+                    width: 256
                     aspectRatio: 1
                     placeholder: BLURRED
+                    transformOptions: { cropFocus: ENTROPY }
                   )
                 }
               }

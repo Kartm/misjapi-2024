@@ -6,6 +6,9 @@ module.exports = {
         extend: {},
         fontFamily: {
             'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        },
+        listStyleType: {
+            square: 'square',
         }
     },
     plugins: [],
