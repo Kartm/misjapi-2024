@@ -35,10 +35,8 @@ const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data}) => {
         <div className="flex flex-col gap-4">
             <LinkButton
                 className="w-48 justify-center bg-amber-500 uppercase text-black"
-                href="/kursy-grupowe/">Zapisz się</LinkButton>
-
-            <LinkButton className={"w-48 justify-center justify-self-stretch bg-transparent uppercase text-black"}
-                        href="/kursy-grupowe/">więcej</LinkButton>
+                href="/kursy-grupowe/"
+            >Zapisz się</LinkButton>
         </div>
     </div>
 }
@@ -52,7 +50,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({teamMembers}) => {
         <section className="my-20 px-4 text-center md:mt-40">
             <div className="container mx-auto">
                 <h1 className="text-3xl md:text-5xl">Wybierz korepetytora, który najbardziej Ci odpowiada!</h1>
-                <div className="mt-12 grid justify-center gap-4 md:mt-20 md:grid-cols-3 md:gap-16 md:text-left">
+                <div className="mt-12 flex flex-wrap justify-center gap-4 md:mt-20 md:grid-cols-3 md:gap-16 md:text-left">
                     {teamMembers.nodes.map((m, i) => <TeamMemberTile
                         key={i}
                         data={m}

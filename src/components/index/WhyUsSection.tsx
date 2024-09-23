@@ -7,19 +7,23 @@ type ReasonTileProps = {
     image: ReactNode;
     title: string;
     description: string;
+    traits: string[][];
     direction: 'image-left' | 'image-right'
 }
 
-const ReasonTile: React.FC<ReasonTileProps> = ({image, title, description, direction = 'image-left'}) => <div
+const ReasonTile: React.FC<ReasonTileProps> = ({image, title, description, traits, direction = 'image-left'}) => <div
     className={twMerge('flex w-full flex-col items-center justify-center gap-4 md:max-w-none md:flex-row md:gap-16', direction === 'image-left' ? '' : 'md:flex-row-reverse')}
 >
     <div className="w-full max-w-96">
         {image}
     </div>
-    <div className="w-full max-w-96">
-        <h3 className="text-lg font-bold md:text-2xl">{title}</h3>
-        <p className="mt-2 text-sm md:mt-4 md:text-base">{description}</p>
-    </div>
+    <div className="flex w-full max-w-96 flex-col gap-4 text-justify ">
+        <h3 className="text-center text-lg font-bold md:text-left md:text-2xl">{title}</h3>
+        <p className="text-sm md:text-base">{description}</p>
+        <ul className="flex flex-col gap-2 pl-4 text-sm md:text-base">
+            {traits.map((trait, i)=> <li className="flex gap-2" key={i}><div className="text-base">{trait[0]}</div>{trait[1]}</li>) }
+    </ul>
+</div>
 </div>
 
 const WhyUsSection: React.FC = () => {
@@ -33,6 +37,7 @@ const WhyUsSection: React.FC = () => {
                 <div className="mt-12 flex flex-col items-center gap-16 md:mt-20 md:text-left">
                     <ReasonTile
                         image={<StaticImage
+                            className="shadow-xl"
                             src={'../../images/why-us/teachers.jpg'}
                             alt={'title'}
                             layout={'constrained'}
@@ -41,13 +46,14 @@ const WhyUsSection: React.FC = () => {
                             quality={80}
                             transformOptions={{fit: "cover", cropFocus: "attention"}}
                         />}
-                        title={t('whyUsSection.teachersWithPassion')}
-                        description={t('whyUsSection.teachersDescription')}
+                        title={t('whyUsSection.teachers.title')}
+                        description={t('whyUsSection.teachers.description')}
+                        traits={t('whyUsSection.teachers.traits', { returnObjects: true })}
                         direction={'image-left'}
-
                     />
                     <ReasonTile
                         image={<StaticImage
+                            className="shadow-xl"
                             src={'../../images/why-us/creativity.jpg'}
                             alt={'title'}
                             layout={'constrained'}
@@ -56,12 +62,14 @@ const WhyUsSection: React.FC = () => {
                             quality={80}
                             transformOptions={{fit: "cover", cropFocus: "attention"}}
                         />}
-                        title={t('whyUsSection.youngCreativeTeam')}
-                        description={t('whyUsSection.teamDescription')}
+                        title={t('whyUsSection.team.title')}
+                        description={t('whyUsSection.team.description')}
+                        traits={t('whyUsSection.team.traits', { returnObjects: true })}
                         direction={'image-right'}
                     />
                     <ReasonTile
                         image={<StaticImage
+                            className="shadow-xl"
                             src={'../../images/why-us/manage.jpg'}
                             alt={'title'}
                             layout={'constrained'}
@@ -70,8 +78,9 @@ const WhyUsSection: React.FC = () => {
                             quality={90}
                             transformOptions={{fit: "cover", cropFocus: 'attention'}}
                         />}
-                        title={t('whyUsSection.everythingUnderControl')}
-                        description={t('whyUsSection.controlDescription')}
+                        title={t('whyUsSection.control.title')}
+                        description={t('whyUsSection.control.description')}
+                        traits={t('whyUsSection.control.traits', { returnObjects: true })}
                         direction={'image-left'}
                     />
                 </div>

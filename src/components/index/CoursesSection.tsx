@@ -13,7 +13,7 @@ const CoursesSection: React.FC = () => {
                 <p className="mt-12 text-sm md:text-base">{t('coursesSection.description')}</p>
 
                 <div className="mt-12 flex flex-wrap justify-center gap-12">
-                    <div className="flex w-full max-w-64 flex-col rounded-lg border px-6 py-8 shadow md:w-72">
+                    <div className="flex w-full max-w-72 flex-col rounded-lg border p-8 shadow-xl">
                         <h3 className="mb-2 text-xl font-bold">{t('coursesSection.individualTutoring')}</h3>
                         <p className="mb-8 text-sm md:text-base">{t('coursesSection.individualTutoringDescription')}</p>
 
@@ -28,7 +28,7 @@ const CoursesSection: React.FC = () => {
                             </div>
                         </div>
 
-                        <ul className="mb-10 flex list-inside list-none flex-col gap-2">
+                        <ul className="list-none mb-10 flex list-inside flex-col gap-2">
                             <li className="flex flex-row items-center gap-3"><StaticImage
                                 src={'../../images/courses/math.svg'}
                                 height={32}
@@ -84,7 +84,7 @@ const CoursesSection: React.FC = () => {
                         >{t('coursesSection.chooseDate')}</LinkButton>
                     </div>
 
-                    <div className="flex w-full max-w-64 flex-col rounded-lg border px-6 py-8 shadow md:w-72">
+                    <div className="flex w-full max-w-72 flex-col rounded-lg border p-8 shadow-xl">
                         <h3 className="mb-2 text-xl font-bold">{t('coursesSection.groupCourses')}</h3>
                         <p className="text-sm md:text-base">{t('coursesSection.groupCoursesDescription1')}</p>
                         <p className="mb-8 text-sm md:text-base">{t('coursesSection.groupCoursesDescription2')}</p>
@@ -97,17 +97,27 @@ const CoursesSection: React.FC = () => {
                             </div>
                         </div>
 
-                        <ul className="mb-10 flex list-inside list-none flex-col gap-2">
+                        <ul className="list-none mb-10 flex list-inside flex-col gap-2">
                             <li className="flex flex-row items-center gap-3"><StaticImage
-                                src={'../../images/courses/math.svg'} height={32} width={32}
-                                transformOptions={{fit: 'cover'}} alt={"math icon"}/> {t('coursesSection.math')}</li>
+                                src={'../../images/courses/math.svg'}
+                                height={32}
+                                width={32}
+                                transformOptions={{fit: 'cover'}}
+                                alt={"math icon"}
+                            /> {t('coursesSection.math')}</li>
                             <li className="flex flex-row items-center gap-3"><StaticImage
-                                src={'../../images/courses/english.svg'} height={32} width={32}
-                                transformOptions={{fit: 'cover'}} alt={"english icon"}/> {t('coursesSection.english')}
+                                src={'../../images/courses/english.svg'}
+                                height={32}
+                                width={32}
+                                transformOptions={{fit: 'cover'}}
+                                alt={"english icon"}
+                            /> {t('coursesSection.english')}
                             </li>
                         </ul>
-                        <LinkButton className={"mt-auto justify-center justify-self-stretch bg-amber-500 text-black"}
-                                    href="/kursy-grupowe/">{t('coursesSection.chooseGroup')}</LinkButton>
+                        <LinkButton
+                            className={"mt-auto justify-center justify-self-stretch bg-amber-500 text-black"}
+                            href="/kursy-grupowe/"
+                        >{t('coursesSection.chooseGroup')}</LinkButton>
                     </div>
                 </div>
             </div>
