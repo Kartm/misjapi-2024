@@ -3,12 +3,15 @@ import {twMerge} from "tailwind-merge";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import {ClassesData} from "../../pages/classes";
 import LinkButton from "../common/LinkButton";
+import IframeDialog from "../common/IframeDialog";
+import {Spinner} from "../common/Spinner";
 
 type TeamMemberTileProps = {
     data: ClassesData['allWpMisjaPiClass']['nodes'][0]
+    onEnrollDialogOpen: () => void;
 }
 
-const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data}) => {
+const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data, onEnrollDialogOpen}) => {
     const image = getImage(data.polaOfertowe.picture.node.localFile.childImageSharp.gatsbyImageData)
 
     return <div
@@ -34,8 +37,11 @@ const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data}) => {
 
         <div className="flex flex-col gap-4">
             <LinkButton
-                className="w-48 justify-center bg-amber-500 uppercase text-black"
-                href="/kursy-grupowe/"
+                className="w-48 cursor-pointer justify-center bg-amber-500 uppercase text-black"
+                onClick={(e) => {
+                    e.preventDefault();
+                    onEnrollDialogOpen()
+                }}
             >Zapisz się</LinkButton>
         </div>
     </div>
@@ -43,15 +49,30 @@ const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data}) => {
 
 type TeamSectionProps = {
     teamMembers: ClassesData['allWpMisjaPiClass']
+    enrollDialog: {
+        open: boolean;
+        setOpen: (open: boolean) => void;
+    }
 }
 
-const TeamSection: React.FC<TeamSectionProps> = ({teamMembers}) => {
+const TeamSection: React.FC<TeamSectionProps> = ({teamMembers, enrollDialog}) => {
+    
+
     return (
         <section className="my-20 px-4 text-center md:mt-40">
+            <IframeDialog
+                open={enrollDialog.open}
+                onClose={() => enrollDialog.setOpen(false)}
+            >
+                <div className='activenow-form-container activenow-form-94513-container'>
+                    <Spinner/>
+                </div>
+            </IframeDialog>
             <div className="container mx-auto">
                 <h1 className="text-3xl md:text-5xl">Wybierz korepetytora, który najbardziej Ci odpowiada!</h1>
                 <div className="mt-12 flex flex-wrap justify-center gap-4 md:mt-20 md:grid-cols-3 md:gap-16 md:text-left">
                     {teamMembers.nodes.map((m, i) => <TeamMemberTile
+                        onEnrollDialogOpen={() => enrollDialog.setOpen(true)}
                         key={i}
                         data={m}
                     />)}

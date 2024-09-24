@@ -4,6 +4,7 @@ import Layout from "../components/common/Layout";
 import Navbar from "../components/common/Navbar";
 import {IGatsbyImageData} from "gatsby-plugin-image";
 import TeamSection from "../components/classes/TeamSection";
+import {useEffect, useState} from "react";
 
 export type ClassesData = {
     allWpMenuItem: {
@@ -81,10 +82,25 @@ export const query = graphql`
 `
 
 const ClassesPage: React.FC<PageProps<ClassesData>> = ({data}) => {
+    const [enrollDialogOpen, setEnrollDialogOpen] = useState(false);
+
+    useEffect(() => {
+        const scriptId = 'my-dynamic-script';
+
+        const existingScript = document.getElementById(scriptId);
+        if (existingScript) {
+            existingScript.remove();
+        }
+
+        const script = document.createElement('script');
+        script.id = scriptId;
+        script.src = 'https://app.activenow.io/external/signup_form/load_by_js?city_id=&code=5rlIFDCVEy0amNhT&instructor_id=&school_id=10721&signup_form_id=94513&venue_id=78527&zz=';
+        document.head.appendChild(script);
+    }, [enrollDialogOpen]);
 
     return <Layout>
         <Navbar menuItems={data.allWpMenuItem.nodes}/>
-        <TeamSection teamMembers={data.allWpMisjaPiClass}/>
+        <TeamSection teamMembers={data.allWpMisjaPiClass} enrollDialog={{open: enrollDialogOpen, setOpen: setEnrollDialogOpen}} />
     </Layout>
 }
 

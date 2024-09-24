@@ -16,6 +16,9 @@
   "rules": {
     // gatsby's rules
     "no-anonymous-exports-page-templates": "warn",
-    "limited-exports-page-templates": "warn"
+    "limited-exports-page-templates": "warn",
+    "tailwindcss/no-custom-classname": ["warn", {
+      "whitelist": ["activenow-form-.*", "list-none"]
+    }]
   }
 }
