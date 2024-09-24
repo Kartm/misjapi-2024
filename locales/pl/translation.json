@@ -58,6 +58,15 @@
     "groupCoursesDescription2": "Grupy składają się z 2-4 osób.",
     "chooseGroup": "Wybierz grupę"
   },
+  "groupCoursesSection": {
+    "title": "Kursy grupowe",
+    "description": "Dołącz do grup, w których są jeszcze miejsca, lub zbierz własną i sam wybierz termin zajęć!",
+    "traits": [
+      ["\uD83E\uDDFE", "Koszt zajęć grupowych: 40 zł/h."],
+      ["\uD83D\uDC49", "Grupy składają się z 2-5 osób."],
+      ["\uD83D\uDD52", "Zajęcia trwają 60 minut."]
+    ]
+  },
   "testimonialsSection": {
     "title": "Poznaj opinie o naszych zajęciach!",
     "description": "Jak inni oceniają skorzystanie z naszych usług?"

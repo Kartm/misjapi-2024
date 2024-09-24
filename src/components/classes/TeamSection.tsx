@@ -1,7 +1,7 @@
 import React from "react";
 import {twMerge} from "tailwind-merge";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
-import {ClassesData} from "../../pages/classes";
+import {ClassesData} from "../../pages/korepetycje";
 import LinkButton from "../common/LinkButton";
 import IframeDialog from "../common/IframeDialog";
 import {Spinner} from "../common/Spinner";

@@ -85,7 +85,7 @@ const ClassesPage: React.FC<PageProps<ClassesData>> = ({data}) => {
     const [enrollDialogOpen, setEnrollDialogOpen] = useState(false);
 
     useEffect(() => {
-        const scriptId = 'my-dynamic-script';
+        const scriptId = 'classes-script';
 
         const existingScript = document.getElementById(scriptId);
         if (existingScript) {
