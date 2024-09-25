@@ -7,8 +7,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Create dummy file
-        run: echo "This is a dummy file" > dummy.txt
+      - name: Get latest code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node_modules-${{hashFiles('package-lock.json')}}
+          restore-keys: node_modules- # Take any latest cache if failed to find it for current package-lock.json
+
+      - name: Build the project
+        run: |
+          npm install
+          npm run build
 
       - name: Upload to FTP server
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
@@ -16,6 +33,6 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
+          local-dir: ./public/
           server-dir: /www/gatsby_dist/
           protocol: ftp
