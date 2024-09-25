@@ -1,0 +1,21 @@
+name: FTP Upload
+
+on: workflow_dispatch
+
+jobs:
+  ftp-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create dummy file
+        run: echo "This is a dummy file" > dummy.txt
+
+      - name: Upload to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /www/gatsby_dist/
+          protocol: ftp
