@@ -14,6 +14,7 @@ const gatsbyRequiredRules = path.join(
 );
 
 const config: GatsbyConfig = {
+    pathPrefix: `/gatsby-dist`,
     siteMetadata: {
         title: `Misja Pi`,
         siteUrl: `https://www.misjapi.pl`
