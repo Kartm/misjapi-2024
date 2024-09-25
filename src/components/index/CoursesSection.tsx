@@ -10,7 +10,7 @@ const CoursesSection: React.FC = () => {
         <section id="courses" className="mt-20 px-4 text-center md:mt-40">
             <div className={"container mx-auto"}>
                 <h1 className="text-3xl font-bold md:text-5xl">{t('coursesSection.title')}</h1>
-                <p className="mt-12 text-sm md:text-base">{t('coursesSection.description')}</p>
+                <p className="mt-12 text-sm text-gray-500 md:text-base">{t('coursesSection.description')}</p>
 
                 <div className="mt-12 flex flex-wrap justify-center gap-12">
                     <div className="flex w-full max-w-72 flex-col rounded-lg border p-8 shadow-xl">

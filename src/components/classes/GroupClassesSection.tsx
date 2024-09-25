@@ -11,7 +11,7 @@ const GroupClassesSection: React.FC = () => {
         <section className="my-20 px-4 text-center md:mt-40">
             <div className="container mx-auto">
                 <h1 className="text-3xl font-bold md:text-5xl">{t('groupCoursesSection.title')}</h1>
-                <p className="mb-8 mt-12 text-sm md:text-base">{t('groupCoursesSection.description')}</p>
+                <p className="mb-8 mt-12 text-sm text-gray-500 md:text-base">{t('groupCoursesSection.description')}</p>
 
                 <ul className="flex flex-col items-center gap-2 pl-4 text-sm md:text-base">
                     {traits.map((trait, i) => <li

@@ -19,9 +19,9 @@ const ReasonTile: React.FC<ReasonTileProps> = ({image, title, description, trait
     </div>
     <div className="flex w-full max-w-96 flex-col gap-4 text-justify ">
         <h3 className="text-center text-lg font-bold md:text-left md:text-2xl">{title}</h3>
-        <p className="text-sm md:text-base">{description}</p>
-        <ul className="flex flex-col gap-2 pl-4 text-sm md:text-base">
-            {traits.map((trait, i)=> <li className="flex gap-2" key={i}><div className="text-base">{trait[0]}</div>{trait[1]}</li>) }
+        <p className="text-sm text-gray-500 md:text-base">{description}</p>
+        <ul className="flex flex-col gap-4 text-sm text-gray-500 md:text-base">
+            {traits.map((trait, i)=> <li className="flex gap-4" key={i}><div className="grow basis-8 text-3xl">{trait[0]}</div><div className="inline-flex">{trait[1]}</div></li>) }
     </ul>
 </div>
 </div>
@@ -33,7 +33,7 @@ const WhyUsSection: React.FC = () => {
         <section className="mt-20 px-4 text-center md:mt-40">
             <div className="container mx-auto">
                 <h1 className="text-3xl font-bold md:text-5xl">{t('whyUsSection.title')}</h1>
-                <p className="mt-12 text-sm md:text-base">{t('whyUsSection.description')}</p>
+                <p className="mt-12 text-sm text-gray-500 md:text-base">{t('whyUsSection.description')}</p>
                 <div className="mt-12 flex flex-col items-center gap-16 md:mt-20 md:text-left">
                     <ReasonTile
                         image={<StaticImage

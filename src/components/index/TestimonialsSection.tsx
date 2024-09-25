@@ -8,7 +8,7 @@ const TestimonialsSection: React.FC = () => {
         <section className="mt-20 bg-amber-50 px-4 py-20 text-center md:mt-40 md:py-40">
             <div className="container mx-auto">
                 <h1 className="mb-8 text-3xl font-bold md:text-5xl">{t('testimonialsSection.title')}</h1>
-                <p className="mb-8 text-sm md:text-base">{t('testimonialsSection.description')}</p>
+                <p className="mb-8 text-sm text-gray-500 md:text-base">{t('testimonialsSection.description')}</p>
 
                 <div className="flex flex-wrap justify-center gap-4 md:gap-12">
                     <iframe

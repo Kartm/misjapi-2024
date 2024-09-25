@@ -10,16 +10,16 @@
     "title": "Dlaczego Misja Pi?",
     "description": "Poznaj trzy rzeczy, które sprawią, że nasze zajęcia mogą Cię zainteresować.",
     "teachers": {
-      "title": "Nauczyciele z pasją",
+      "title": "1. Nauczyciele z pasją",
       "description": "Większość z nas stanowią harcerze, animatorzy i pasjonaci nauki. Wiemy, jak wspierać w rozwoju we własnym tempie i uczynić naukę mniej stresującą.",
       "traits": [
         ["\uD83D\uDE09","Spotkania prowadzą empatyczne, cierpliwe i kreatywne osoby."],
         ["\uD83D\uDCDC", "Nasi korepetytorze stale się uczą i doskonalą swoje umiejętności podnosząc kwalifikację, dlatego potrafią zrozumieć perspektywę ucznia."],
-        ["\uD83D\uDCC3", "Uwzględniamy indywidualne potrzeby edukacyjne każdego dziecka, w tym wszelkie orzeczenia."]
+        ["\uD83D\uDD0D", "Uwzględniamy indywidualne potrzeby edukacyjne każdego dziecka, w tym wszelkie orzeczenia."]
       ]
     },
     "team": {
-      "title": "Kreatywność i doświadczenie",
+      "title": "2. Kreatywność i doświadczenie",
       "description": "Wiemy, jak wykorzystać nowoczesne narzędzia do pracy zdalnej, aby nauka była przyjemniejsza i bardziej efektywna.",
       "traits": [
         ["\uD83D\uDCBB", "Do naszych zajęć możesz dołączyć z własnego domu!"],
@@ -28,10 +28,10 @@
       ]
     },
     "control": {
-      "title": "Wszystko pod kontrolą",
+      "title": "3. Wszystko pod kontrolą",
       "description": "Dostajesz dostęp do platformy ActiveNow. Umówione terminy, tematy zajęć, materiały i płatności w jednym miejscu. Nie musisz już martwić się, że o czymś zapomnisz!",
       "traits": [
-        ["\uD83D\uDCF2", "Każdy uczeń otrzymuje dostęp do konta w ActiveNow, gdzie w jednym miejscu znajdzie wszystkie informacje i materiały."],
+        ["\uD83D\uDCF2", "Uczeń otrzymuje dostęp do konta w ActiveNow, gdzie w jednym miejscu znajdzie wszystkie informacje i materiały."],
         ["\uD83D\uDCD6", "Rodzic ma przejrzysty dostęp do stanu swoich rozliczeń, tematów zajęć, terminów i kontaktu do prowadzącego."],
         ["\uD83D\uDCCA", "Możesz liczyć na feedback dotyczący efektów."]
       ]
@@ -55,7 +55,7 @@
     "chooseDate": "Wybierz termin",
     "groupCourses": "KURSY GRUPOWE",
     "groupCoursesDescription1": "Egzamin ósmoklasisty/matura.",
-    "groupCoursesDescription2": "Grupy składają się z 2-4 osób.",
+    "groupCoursesDescription2": "Grupy 2-4 osobowe.",
     "chooseGroup": "Wybierz grupę"
   },
   "groupCoursesSection": {

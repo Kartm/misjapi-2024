@@ -19,7 +19,7 @@ const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data, onEnrollDialogOpen
     >
         <div className="absolute inset-x-0 bottom-0 top-24 -z-10 border border-t-4 border-gray-200 border-t-black shadow-md"/>
 
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex w-full flex-col items-center gap-4">
             <GatsbyImage
                 className="w-52 rounded-full drop-shadow-md"
                 image={image!}
@@ -30,7 +30,7 @@ const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data, onEnrollDialogOpen
                 <h5 className="text-sm text-gray-500">{data.polaOfertowe.subtitle}, {data.polaOfertowe.hourlyRate} zł/h</h5>
             </div>
             <div
-                className="w-full text-sm [&>ul>li]:mt-1 [&>ul]:ml-1.5 [&>ul]:list-inside [&>ul]:list-square"
+                className="w-full pl-4 text-left text-sm [&>ul>li]:mt-1 [&>ul]:ml-1.5 [&>ul]:list-outside [&>ul]:list-square"
                 dangerouslySetInnerHTML={{__html: data.polaOfertowe.description}}
             />
         </div>
@@ -69,7 +69,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({teamMembers, enrollDialog}) =>
                 </div>
             </IframeDialog>
             <div className="container mx-auto">
-                <h1 className="text-3xl md:text-5xl">Wybierz korepetytora, który najbardziej Ci odpowiada!</h1>
+                <h1 className="text-3xl font-bold md:text-5xl">Wybierz korepetytora, który najbardziej Ci odpowiada!</h1>
                 <div className="mt-12 flex flex-wrap justify-center gap-4 md:mt-20 md:grid-cols-3 md:gap-16 md:text-left">
                     {teamMembers.nodes.map((m, i) => <TeamMemberTile
                         onEnrollDialogOpen={() => enrollDialog.setOpen(true)}
