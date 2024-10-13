@@ -11,6 +11,8 @@ type TeamMemberTileProps = {
     onEnrollDialogOpen: () => void;
 }
 
+// todo ukrywanie ludzi
+
 const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data, onEnrollDialogOpen}) => {
     const image = getImage(data.polaOfertowe.picture.node.localFile.childImageSharp.gatsbyImageData)
 
@@ -30,7 +32,7 @@ const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data, onEnrollDialogOpen
                 <h5 className="text-sm text-gray-500">{data.polaOfertowe.subtitle}, {data.polaOfertowe.hourlyRate} zł/h</h5>
             </div>
             <div
-                className="w-full pl-4 text-left text-sm [&>ul>li]:mt-1 [&>ul]:ml-1.5 [&>ul]:list-outside [&>ul]:list-square"
+                className="flex w-full flex-col gap-2 pl-4 text-justify text-sm [&>b]:font-semibold [&>ul>li]:mt-1 [&>ul]:ml-1.5 [&>ul]:list-outside [&>ul]:list-square [&>ul]:text-left"
                 dangerouslySetInnerHTML={{__html: data.polaOfertowe.description}}
             />
         </div>
