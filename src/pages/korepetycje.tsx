@@ -17,6 +17,8 @@ export type ClassesData = {
         nodes: {
             polaOfertowe: {
                 ordering: number;
+                hidden: boolean;
+                unavailable: boolean;
                 title: string;
                 subtitle: string;
                 description: string;
@@ -48,6 +50,8 @@ export const query = graphql`
       nodes {
         polaOfertowe {
           ordering
+          hidden
+          unavailable
           title
           subtitle
           description

@@ -11,11 +11,10 @@ type TeamMemberTileProps = {
     onEnrollDialogOpen: () => void;
 }
 
-// todo ukrywanie ludzi
-
 const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data, onEnrollDialogOpen}) => {
     const image = getImage(data.polaOfertowe.picture.node.localFile.childImageSharp.gatsbyImageData)
 
+    console.log(data.polaOfertowe)
     return <div
         className={twMerge('flex text-sm w-full max-w-96 flex-col items-center justify-between relative gap-4 p-8 pb-8 pt-0 font-light')}
     >
@@ -38,13 +37,18 @@ const TeamMemberTile: React.FC<TeamMemberTileProps> = ({data, onEnrollDialogOpen
         </div>
 
         <div className="flex flex-col gap-4">
-            <LinkButton
+            {data.polaOfertowe.unavailable ? <LinkButton
+                className="w-48 cursor-pointer justify-center bg-gray-800 uppercase text-gray-50"
+                onClick={(e) => {
+                    e.preventDefault();
+                }}
+            >Brak miejsc</LinkButton> : <LinkButton
                 className="w-48 cursor-pointer justify-center bg-amber-500 uppercase text-black"
                 onClick={(e) => {
                     e.preventDefault();
                     onEnrollDialogOpen()
                 }}
-            >Zapisz się</LinkButton>
+            >Zapisz się</LinkButton>}
         </div>
     </div>
 }
@@ -73,7 +77,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({teamMembers, enrollDialog}) =>
             <div className="container mx-auto">
                 <h1 className="text-3xl font-bold md:text-5xl">Wybierz korepetytora, który najbardziej Ci odpowiada!</h1>
                 <div className="mt-12 flex flex-wrap justify-center gap-4 md:mt-20 md:grid-cols-3 md:gap-16 md:text-left">
-                    {teamMembers.nodes.map((m, i) => <TeamMemberTile
+                    {teamMembers.nodes.filter(m => !m.polaOfertowe.hidden).map((m, i) => <TeamMemberTile
                         onEnrollDialogOpen={() => enrollDialog.setOpen(true)}
                         key={i}
                         data={m}
