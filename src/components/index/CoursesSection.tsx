@@ -76,7 +76,14 @@ const CoursesSection: React.FC = () => {
                                 alt={"biology icon"}
                             /> {t('coursesSection.biology')}
                             </li>
-
+                            <li className="flex flex-row items-center gap-3"><StaticImage
+                                src={'../../images/courses/geography.svg'}
+                                height={32}
+                                width={32}
+                                transformOptions={{fit: 'cover'}}
+                                alt={"geography icon"}
+                            /> {t('coursesSection.geography')}
+                            </li>
                         </ul>
                         <LinkButton
                             className={"justify-center justify-self-stretch bg-amber-500 text-black"}

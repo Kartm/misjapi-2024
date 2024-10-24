@@ -2,41 +2,9 @@ import * as React from "react"
 import {graphql, HeadFC, PageProps} from "gatsby"
 import Layout from "../components/common/Layout";
 import Navbar from "../components/common/Navbar";
-import {IGatsbyImageData} from "gatsby-plugin-image";
 import TeamSection from "../components/classes/TeamSection";
 import {useEffect, useState} from "react";
-
-export type ClassesData = {
-    allWpMenuItem: {
-        nodes: {
-            url: string
-            label: string
-        }[]
-    },
-    allWpMisjaPiClass: {
-        nodes: {
-            polaOfertowe: {
-                ordering: number;
-                hidden: boolean;
-                unavailable: boolean;
-                title: string;
-                subtitle: string;
-                description: string;
-                picture: {
-                    node: {
-                        localFile: {
-                            childImageSharp: {
-                                gatsbyImageData: IGatsbyImageData
-                            }
-                        }
-                        mediaItemUrl: string;
-                    }
-                }
-                hourlyRate: number;
-            }
-        }[]
-    }
-}
+import {ClassesData} from "../models";
 
 export const query = graphql`
   query ($language: String!) {
